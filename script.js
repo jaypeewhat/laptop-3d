@@ -79,7 +79,7 @@ function setupNavigation() {
 
 function setupDownloadButtons() {
     // Android APK download URL
-    const apkUrl = 'https://www.mediafire.com/file/6o5lkv16651id1w/app-release.apk/file';
+    const apkUrl = 'https://www.mediafire.com/file/fdv9m4l64jlr1bd/app-release.apk/file';
     
     window.downloadApp = function() {
         trackDownload('auto', 'android');
@@ -94,6 +94,15 @@ function setupDownloadButtons() {
     window.scrollToFeatures = function() {
         document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
     };
+    
+    // APK download handler
+    const downloadBtn = document.getElementById('downloadBtn');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', () => {
+            const apkUrl = 'https://www.mediafire.com/file/fdv9m4l64jlr1bd/app-release.apk/file';
+            window.open(apkUrl, '_blank');
+        });
+    }
 }
 
 function trackDownload(type, os) {
