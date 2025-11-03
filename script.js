@@ -79,7 +79,7 @@ function setupNavigation() {
 
 function setupDownloadButtons() {
     // Android APK download URL
-    const apkUrl = 'https://www.mediafire.com/file/m9j7q74ogbmi6r5/app-release.apk/file';
+    const apkUrl = 'https://www.mediafire.com/file/lro4uy4ijk7s38d/app-release.apk/file';
     
     window.downloadApp = function() {
         trackDownload('auto', 'android');
